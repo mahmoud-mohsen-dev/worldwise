@@ -4,6 +4,9 @@
     justify-content: space-between;
 }
 
+.nav img {
+    height: 5.2rem;
+}
 .nav ul {
     list-style: none;
     display: flex;
