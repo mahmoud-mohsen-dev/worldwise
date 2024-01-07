@@ -1,5 +1,5 @@
 .homepage {
-    height: calc(100vh - 5rem);
+    min-height: calc(100vh - 5rem);
     margin: 2.5rem;
     background-image: linear-gradient(
             rgba(36, 42, 46, 0.8),
@@ -19,6 +19,7 @@
     justify-content: center;
     gap: 2.5rem;
     text-align: center;
+    margin-top: 5rem;
 }
 
 .homepage h1 {

@@ -1,12 +1,11 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./PageNav.module.css";
+import Logo from "./Logo";
 
 function PageNav() {
     return (
         <nav className={styles.nav}>
-            <Link to="/">
-                <img src="./logo.png" alt="worldwise-logo" />
-            </Link>
+            <Logo />
             <ul>
                 <li>
                     <NavLink to="/pricing">Pricing</NavLink>
