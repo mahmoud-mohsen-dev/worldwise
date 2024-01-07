@@ -1,6 +1,18 @@
 import styles from "./Sidebar.module.css";
+import Logo from "./Logo";
+import AppNav from "./AppNav";
+import Footer from "./Footer";
+import { Outlet } from "react-router-dom";
 function Sidebar() {
-    return <div className={styles.sidebar}></div>;
+    return (
+        <aside className={styles.sidebar}>
+            <Logo />
+            <AppNav />
+
+            <Outlet />
+            <Footer />
+        </aside>
+    );
 }
 
 export default Sidebar;
