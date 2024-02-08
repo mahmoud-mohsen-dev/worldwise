@@ -6,8 +6,6 @@ import eslint from "vite-plugin-eslint";
 export default defineConfig({
     plugins: [react(), eslint()],
     server: {
-        port: 5500,
-        host: "0.0.0.0",
+        port: 3000,
     },
-    // base: "/worldwise/",
 });

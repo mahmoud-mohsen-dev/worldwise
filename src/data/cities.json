@@ -1,3 +1,40 @@
 {
-  "cities": []
+  "cities": [
+    {
+      "cityName": "Bi’r al ‘Abd",
+      "country": "Egypt",
+      "emoji": "🇪🇬",
+      "date": "2024-02-08T20:47:00.300Z",
+      "notes": "",
+      "position": {
+        "lat": "31.034108344903512",
+        "lng": "33.42210200079494"
+      },
+      "id": 1
+    },
+    {
+      "cityName": "El Dabaa",
+      "country": "Egypt",
+      "emoji": "🇪🇬",
+      "date": "2024-02-08T20:47:04.770Z",
+      "notes": "",
+      "position": {
+        "lat": "29.76437737516313",
+        "lng": "28.259627480999164"
+      },
+      "id": 2
+    },
+    {
+      "cityName": "Al Fayyum",
+      "country": "Egypt",
+      "emoji": "🇪🇬",
+      "date": "2024-02-08T20:47:20.322Z",
+      "notes": "",
+      "position": {
+        "lat": "29.305561325527698",
+        "lng": "30.741722475786588"
+      },
+      "id": 3
+    }
+  ]
 }
