@@ -13,12 +13,14 @@ export default function Login() {
 
     function handleClick(e) {
         e.preventDefault();
-        login(email, password);
+        if (email && password) {
+            login(email, password);
+        }
     }
 
     useEffect(() => {
         if (isAuthenticated) {
-            navigate("/app");
+            navigate("/app", { replace: true });
         }
     }, [isAuthenticated, navigate]);
 
