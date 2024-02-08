@@ -15,10 +15,10 @@ import Button from "./Button";
 import useUrlPosition from "../hooks/useUrlPosition";
 
 function Map() {
+    const { cities } = useCities();
     const [mapPosition, setMapPosition] = useState([
         30.04010515281878, 31.241950789456556,
     ]);
-    const { cities } = useCities();
 
     const {
         isLoading: isLoadingPosition,
@@ -63,7 +63,9 @@ function Map() {
                             key={city.id}
                         >
                             <Popup>
-                                A pretty CSS3 popup. <br /> Easily customizable.
+                                {city.cityName} , {city.country} <br />
+                                lat: {city.position.lat} <br />
+                                lng: {city.position.lng}
                             </Popup>
                         </Marker>
                     );
