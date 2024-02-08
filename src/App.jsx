@@ -13,6 +13,8 @@ import Form from "./components/Form";
 import { CitiesProvider } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import { inject } from "@vercel/analytics";
+inject();
 
 function App() {
     return (
