@@ -1,5 +1,10 @@
-import { useContext, useReducer } from "react";
-import { createContext, useEffect } from "react";
+import {
+    createContext,
+    useEffect,
+    useCallback,
+    useContext,
+    useReducer,
+} from "react";
 
 const CitiesContext = createContext();
 const BASE_URL = "http://localhost:8000";
@@ -81,28 +86,31 @@ function CitiesProvider({ children }) {
         fetchCities();
     }, []);
 
-    function getCity(id) {
-        if (Number(id) === currentCity.id) return;
-        async function fetchCity() {
-            try {
-                dispatch({ type: "Loading" });
-                const res = await fetch(`${BASE_URL}/cities/${id}`);
-                if (!res.ok) throw new Error(res.status);
-                const data = await res.json();
-                dispatch({
-                    type: "city/loaded",
-                    payload: data,
-                });
-            } catch (err) {
-                dispatch({
-                    type: "rejected",
-                    payload: "There was an error loading current city...",
-                });
-                console.log(err);
+    const getCity = useCallback(
+        function getCity(id) {
+            if (Number(id) === currentCity.id) return;
+            async function fetchCity() {
+                try {
+                    dispatch({ type: "Loading" });
+                    const res = await fetch(`${BASE_URL}/cities/${id}`);
+                    if (!res.ok) throw new Error(res.status);
+                    const data = await res.json();
+                    dispatch({
+                        type: "city/loaded",
+                        payload: data,
+                    });
+                } catch (err) {
+                    dispatch({
+                        type: "rejected",
+                        payload: "There was an error loading current city...",
+                    });
+                    console.log(err);
+                }
             }
-        }
-        fetchCity();
-    }
+            fetchCity();
+        },
+        [currentCity.id]
+    );
 
     async function postCity(newCity) {
         try {
