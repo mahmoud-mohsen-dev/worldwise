@@ -6,7 +6,7 @@
 
 ## Try it Live!
 
-Check out the live app [The React Quiz](https://worldwise-flame.vercel.app/)
+Check out the live app [Worldwise](https://worldwise-flame.vercel.app/)
 
 ## Tools and Libraries Used
 
